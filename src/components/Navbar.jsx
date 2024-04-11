@@ -66,7 +66,7 @@ export default function Navbar() {
                     </p>
                 </div>
 
-                <div className='absolute'>
+                {/* <div className='absolute'>
 
                 <div id='show1' className='bg-sky-600 shadow-inner shadow-sky-100 border-2 border-sky-700 hover:bg-sky-700 relative bottom-11 right-10 justify-center rounded-full  w-16 h-16 mx-24 sm:hidden hidden'>
                     <p className='flex justify-center items-center pt-3'>
@@ -92,7 +92,7 @@ export default function Navbar() {
                         </svg>
                     </p>
                 </div>
-                </div>
+                </div> */}
 
                 <div className='hidden sm:flex'>
                     <ul className='gap-12 hidden sm:flex sm:gap-4 md:gap-10'>

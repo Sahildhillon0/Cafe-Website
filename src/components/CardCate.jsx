@@ -24,27 +24,45 @@ export default function CardCate(props) {
 
     return (
         <div>
-            <div className='flex justify-center items-center w-[25.8rem] sm:w-[30rem] sm:h-56 h-48 mb-2 shadow-md bg-sky-100 overflow-hidden sm:flex sm:flex-col sm:justify-center rounded-xl mx-3 '>
+            <div className='flex justify-center items-center w-[95vw] sm:w-[30rem] sm:h-56 h-48 mb-2 shadow-md bg-sky-100 overflow-hidden sm:flex sm:flex-col sm:justify-center rounded-xl mx-3 '>
                 <p className='border-2 border-sky-100 sm:p-16 text-sky-100 p-14'>
                     ________
                 </p>
-                <img src={props.image} alt="" className='min-w-36 h-36 rounded-3xl sm:hidden relative left-44' />
+                <img src={props.image} alt="" className='min-w-36 h-36 rounded-3xl sm:hidden relative left-52' />
                 <p className='hidden sm:block'>
                     <img className='relative sm:w-36 sm:h-36 sm:rounded-3xl sm:left-36 sm:top-0' src={props.image} alt="" />
                 </p>
-                <div onClick={showOperatorsHandler}
-                    className='relative flex cursor-pointer justify-between items-center min-w-20 sm:left-36 left-16 top-[4.5rem] sm:-top-4 bg-sky-50 p-1 sm:w-24 sm:px-4 px-6 text-black rounded-xl border-[3px] border-sky-300'>
-                    <p className={`text-lg `} id='operator1' onClick={decrementCounter}>
+                {
+                    Add===0 ? (
+                        <div onClick={showOperatorsHandler}
+                        className='relative text-center cursor-pointer min-w-20 sm:left-36 left-24 top-[4.5rem] sm:-top-4 bg-sky-50 p-1 sm:w-24 sm:px-4 px-6 text-black rounded-xl border-[3px] border-sky-300'>
+                        {/* <p className={`text-lg `} id='operator1' onClick={decrementCounter}>
                         -
-                    </p>
-                    <p className='text-lg'>
-                        {Add}
-                    </p>
-                    <p className={`text-lg`} id='operator2' onClick={incrementCounter}>
+                        </p> */}
+                        <p className='text-lg' onClick={incrementCounter}>
+                        Add
+                        </p>
+                        {/* <p className={`text-lg`} id='operator2' onClick={incrementCounter}>
                         +
-                    </p>
-                </div>
-                <div className='relative sm:bottom-44 sm:right-24 right-72'>
+                        </p> */}
+                        </div>
+                    ) : (
+
+                        <div onClick={showOperatorsHandler}
+                        className='relative flex cursor-pointer justify-between items-center min-w-20 sm:left-36 left-24 top-[4.5rem] sm:-top-4 bg-sky-50 p-1 sm:w-24 sm:px-4 px-6 text-black rounded-xl border-[3px] border-sky-300'>
+                        <p className={`text-lg `} id='operator1' onClick={decrementCounter}>
+                        -
+                        </p>
+                        <p className='text-lg'>
+                        {Add}
+                        </p>
+                        <p className={`text-lg`} id='operator2' onClick={incrementCounter}>
+                        +
+                        </p>
+                        </div>
+                    )
+                }
+                <div className='relative sm:bottom-44 sm:right-24 right-[21rem]'>
                     <p className='text-2xl'>
                         {props.name}
                     </p>

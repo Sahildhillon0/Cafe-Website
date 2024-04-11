@@ -30,7 +30,7 @@ export default function Home() {
                 <p className='text-gray-500 font-semibold bg-sky-100 text-center my-4 '>
                 ------------------------Categories------------------------
                 </p>
-                <ul className='flex gap-2 overflow-x-auto my-8 bg-sky-100 h-[21rem] '>
+                <ul className='flex gap-2 overflow-x-auto bg-sky-100 h-[21rem] '>
                 <CateNav/>
                 </ul>
             </div>
